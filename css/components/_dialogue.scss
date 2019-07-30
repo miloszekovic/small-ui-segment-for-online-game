@@ -1,0 +1,110 @@
+/* dialogue */
+.dialogue-container {
+  width: 288px;
+
+  margin-left: 89px;
+
+  background: rgba($accent-dark, 0.6);
+  @include box-shadow(
+    0 4px 5px rgba(0, 0, 0, 0.27),
+    0 3px 14px rgba(0, 0, 0, 0.16),
+    0 8px 10px rgba(0, 0, 0, 0.19)
+  );
+  @include rounded-corners(6px);
+
+  .dialogue {
+    height: 144px;
+
+    padding: 16px 12px 0 8px;
+
+    border-left: 4px solid $accent-aqua;
+    @include rounded-corners(6px 0 0 6px);
+  }
+
+  .character-container {
+    position: relative;
+
+    height: 48px;
+
+    margin-bottom: 8px;
+
+    .character-name-container {
+      position: relative;
+      z-index: 1;
+
+      padding-top: 12px;
+    }
+
+    .character-name {
+      height: 25px;
+
+      padding-top: 4px;
+
+      background: $inputs-bg;
+      text-align: center;
+      @include box-shadow-inset(
+        inset 1px 1px 1px #18262b,
+        inset -1px -1px 1px #37545c
+      );
+      @include rounded-corners(6px);
+    }
+
+    .character-img {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      top: 0;
+
+      width: 48px;
+      height: 48px;
+
+      padding: 3px;
+
+      background: $inputs-bg;
+      @include rounded-corners(100%);
+
+      img {
+        @extend .img;
+        @include rounded-corners(100%);
+      }
+    }
+
+    .yellow-line {
+      display: block;
+
+      width: 64px;
+      height: 5px;
+
+      margin-left: 30px;
+
+      background: $accent-yellow;
+      @include transform(skew(-50deg));
+    }
+
+    .img-cover {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+
+      width: 30px;
+      height: 40px;
+
+      background: $cover;
+    }
+  }
+
+  .spoken-text-container {
+    height: 64px;
+
+    padding: 6px 8px 0;
+
+    background: $inputs-bg;
+
+    @include box-shadow-inset(
+      inset 1px 1px 1px #18262b,
+      inset -1px -1px 1px #37545c
+    );
+    @include rounded-corners(6px);
+  }
+}

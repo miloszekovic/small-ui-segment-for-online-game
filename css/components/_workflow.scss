@@ -1,0 +1,29 @@
+/* workflow */
+.workflow {
+  padding-top: 12px;
+
+  ul li {
+    padding: 4px;
+
+    a {
+      display: block;
+
+      width: 32px;
+      height: 32px;
+
+      padding: 4px;
+
+      background: rgba($sub-bg, 0.75);
+      @include box-shadow(
+        0 1px 10px rgba(0, 0, 0, 0.27),
+        0 4px 5px rgba(0, 0, 0, 0.16),
+        0 2px 4px rgba(0, 0, 0, 0.19)
+      );
+      @include rounded-corners(3px);
+
+      img {
+        @extend .img;
+      }
+    }
+  }
+}

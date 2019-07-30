@@ -1,0 +1,35 @@
+/* toolbar nav */
+.toolbar-nav {
+  display: block;
+
+  width: 164px;
+  height: 32px;
+
+  margin: 71px 0 4px 151px;
+
+  background: rgba($sub-bg, 0.75);
+  @include box-shadow(
+    0 1px 10px rgba(0, 0, 0, 0.27),
+    0 4px 5px rgba(0, 0, 0, 0.16),
+    0 2px 4px rgba(0, 0, 0, 0.19)
+  );
+  @include rounded-corners(3px);
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding: 6px 4px;
+
+      a {
+        display: block;
+
+        width: 20px;
+        height: 20px;
+
+        background: $base-light;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/* mixing */
+@mixin font-size($size: 1.6, $line: $size * 1.5) {
+  font-size: ($size * 10) + px;
+  line-height: ($line * 10) + px;
+}
+
+@mixin box-shadow($right, $left, $top) {
+  -webkit-box-shadow: $right, $left, $top;
+  box-shadow: $right, $left, $top;
+}
+
+@mixin box-shadow-inset($inner, $top) {
+  -webkit-box-shadow: $inner, $top;
+  box-shadow: $inner, $top;
+}
+
+@mixin rounded-corners($size) {
+  -webkit-border-radius: $size;
+  border-radius: $size;
+}
+
+@mixin transition($transitions) {
+  -webkit-transition: $transitions;
+  transition: $transitions;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
